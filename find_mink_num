@@ -1,0 +1,10 @@
+def find_mink_num(list,k):
+    for i in range(k):
+        for j in range(i+1,len(list)):
+            if list[i]>list[j]:
+                list[j],list[i] = list[i],list[j]
+    return list[0:k]
+
+list=[5,3,2,4,6]
+a=find_mink_num(list,4)
+print(a)

@@ -1,0 +1,22 @@
+#this script is use to find a target number in matrix#
+
+def find_number_in_matrix(nums,target,i,j):
+    print('len nums=',len(nums))
+    if len(nums)==0 or len(nums[0])==0:
+        return False
+    while i<len(nums) and j>0:
+        if target == nums[i][j]:
+            return 1
+        if target <nums[i][j]:
+            j=j-1
+        else:
+            i=i+1
+    return 2
+
+a=[[1,4,7, 11, 15],[2,  5, 8, 12, 19], [3, 6, 9, 16,22],[10, 13, 14, 17, 24],[18, 21, 23, 26, 30]]
+i=0
+j=len(a[0])-1
+target=55
+#print(a,i,j)
+res=find_number_in_matrix(a,target,i,j)
+print(res)

@@ -1,0 +1,24 @@
+def check_num_repeated(nums):
+    for i in range(0,len(nums)):
+        print(i)
+        while i != nums[i]:
+            if nums[i] == nums[nums[i]]:
+                return nums[i]
+            else:
+                swap(nums,i,nums[i])
+                print(nums)
+        swap(nums,i,nums[i])
+        print(nums)
+    return -1
+
+
+def swap(nums,i,j):
+    a=nums[i]
+    nums[i]=nums[j]
+    nums[j]=a
+
+nums=[2,1,0,2,3]
+#print(nums[0])
+#print(len(nums))
+a=check_num_repeated(nums)
+print('a=:',a)
